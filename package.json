@@ -1,0 +1,24 @@
+{
+  "name": "cordova-plugin-memory-warning",
+  "version": "0.0.1",
+  "description": "Cordova plugin for memory warning process",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uuke/cordova-plugin-memory-warning.git"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "app",
+    "plugin"
+  ],
+  "author": "tidycoder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uuke/cordova-plugin-memory-warning/issues"
+  },
+  "homepage": "https://github.com/uuke/cordova-plugin-memory-warning#readme"
+}
