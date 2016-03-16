@@ -15,6 +15,13 @@
     </engines>
     <!-- ios -->
     <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MemoryWarning">
+                <param name="ios-package" value="CDVMemoryWarning" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
         <plugins-plist key="MemoryWarning" string="MemoryWarning" />
 
         <header-file src="src/ios/CDVMemoryWarning.h" />
