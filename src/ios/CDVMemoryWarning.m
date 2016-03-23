@@ -15,7 +15,13 @@
    // override to remove caches, etc
     NSLog(@"onMemoryWarning");
     NSString * javascriptString = @"cleanMemoryCache();";
-   [self.webView stringByEvaluatingJavaScriptFromString:javascriptString];
+  if ([self.webView respondsToSelector:@selector(stringByEvaluatingJavaScriptFromString:)]) {
+    // Cordova-iOS pre-4
+    [self.webView performSelectorOnMainThread:@selector(stringByEvaluatingJavaScriptFromString:) withObject:javascriptString waitUntilDone:NO];
+  } else {
+    // Cordova-iOS 4+
+    [self.webView performSelectorOnMainThread:@selector(evaluateJavaScript:completionHandler:) withObject:javascriptString waitUntilDone:NO];
+  }
 }
 
 
